@@ -61,6 +61,15 @@ Ustawienia zostają w `%APPDATA%\Nagrywarka` – można usunąć ten folder ręc
 Zgłoś je w [Issues](https://github.com/SeRgI1982/RollCam-releases/issues): opisz, co się stało, i dołącz wersję
 Windows oraz RollCam.
 
+## Wsparcie
+
+RollCam jest darmowy. Jeśli Ci się przydaje, możesz dobrowolnie postawić autorowi kawę na Suppi (BLIK, przelew,
+karta). Wsparcie jest dobrowolne – nie jest zapłatą za program i nie daje dodatkowych funkcji.
+
+<a href="https://suppi.pl/sergi1982"><img src="docs/img/suppi-button.webp" alt="Postaw mi kawkę na Suppi!" width="255"></a>
+
+Spoza Polski: [Ko-fi](https://ko-fi.com/sergi1982).
+
 ## Licencja
 
 RollCam jest darmowy i udostępniany na licencji [MIT](LICENSE.txt) (© 2026 DevGroup): „tak jak jest”, bez żadnych
@@ -90,3 +99,7 @@ Settings.
 - **License:** [MIT](LICENSE.txt), © 2026 DevGroup – free, provided “as is”, without warranty.
   Third-party components: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 - **Issues:** [GitHub Issues](https://github.com/SeRgI1982/RollCam-releases/issues).
+- **Support:** RollCam is free. If you find it useful, you can buy the author a coffee on Ko-fi (card, PayPal,
+  Apple Pay, Google Pay). It is voluntary – not a payment for the app and it unlocks nothing.
+
+  <a href="https://ko-fi.com/sergi1982"><img src="docs/img/kofi-button.webp" alt="Support me on Ko-fi" width="240"></a>

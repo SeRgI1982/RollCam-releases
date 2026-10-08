@@ -270,6 +270,10 @@
            border: 1px solid var(--n700); }
   .final h2 { max-width: 760px; }
   .final p { color: var(--n300); font-size: 18px; max-width: 620px; }
+  .support { display: grid; gap: 14px; justify-items: center; margin-top: 18px; padding-top: 26px; border-top: 1px solid var(--n700); width: min(560px, 100%); }
+  .support p { font-size: 16px; }
+  .support .suppi img { border-radius: 12px; transition: transform .15s; }
+  .support .suppi:hover img { transform: translateY(-1px); }
 
   footer { padding: 56px 0 44px; border-top: 1px solid rgba(255,255,255,.06); margin-top: 110px; color: var(--n400); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
@@ -834,6 +838,13 @@
     </div>
     <p class="cta-note" style="margin:0" data-l="pl">RollCam-win-Setup.exe · ok. 10 MB · Windows 10/11</p>
     <p class="cta-note" style="margin:0" data-l="en">RollCam-win-Setup.exe · about 10 MB · Windows 10/11</p>
+    <!-- Voluntary support: Suppi for Polish visitors (BLIK, transfers), Ko-fi for everyone else -->
+    <div class="support" id="wsparcie">
+      <p data-l="pl">RollCam jest darmowy. Jeśli Ci się przydaje, możesz dobrowolnie postawić autorowi kawę.</p>
+      <p data-l="en">RollCam is free. If you find it useful, you can buy the author a coffee.</p>
+      <a data-l="pl" class="suppi" href="https://suppi.pl/sergi1982" target="_blank" rel="noopener"><img src="img/suppi-button.webp" width="255" height="66" alt="Postaw mi kawkę na Suppi!"></a>
+      <div data-l="en" class="kofi"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'L1H828FH9K');kofiwidget2.draw();</script></div>
+    </div>
   </div>
 </section>
 </main>
