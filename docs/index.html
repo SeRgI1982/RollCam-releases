@@ -305,6 +305,7 @@
              box-shadow: 0 20px 50px rgba(0,0,0,.55); display: grid; gap: 14px; }
   .consent[hidden] { display: none !important; }
   .consent p { margin: 0; font-size: 15px; color: var(--n200); }
+  .consent a { color: var(--red300); }
   .consent .row-btns { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
   .consent .btn { min-width: 120px; }
 
@@ -888,12 +889,12 @@
       <a href="#faq">FAQ</a>
       <a href="https://github.com/SeRgI1982/RollCam-releases">GitHub</a>
     </nav>
-    <span><button type="button" class="link-btn" id="cookie-settings"><span data-l="pl">Cookies</span><span data-l="en">Cookies</span></button> · © 2026 DevGroup · MIT</span>
+    <span><a href="privacy.html"><span data-l="pl">Prywatność</span><span data-l="en">Privacy</span></a> · <button type="button" class="link-btn" id="cookie-settings"><span data-l="pl">Cookies</span><span data-l="en">Cookies</span></button> · © 2026 DevGroup · MIT</span>
   </div>
 </footer>
 
 <div class="consent" id="consent" role="dialog" aria-live="polite" aria-labelledby="consent-text" hidden>
-  <p id="consent-text"><span data-l="pl">Ta strona używa plików cookie do zbierania statystyk odwiedzin. Zgoda jest dobrowolna – możesz ją zmienić w każdej chwili w stopce strony.</span><span data-l="en">This site uses cookies to collect visit statistics. Consent is optional – you can change your choice at any time in the footer.</span></p>
+  <p id="consent-text"><span data-l="pl">Ta strona używa plików cookie do zbierania statystyk odwiedzin. Zgoda jest dobrowolna – możesz ją zmienić w każdej chwili w stopce strony. <a href="privacy.html">Polityka prywatności</a></span><span data-l="en">This site uses cookies to collect visit statistics. Consent is optional – you can change your choice at any time in the footer. <a href="privacy.html">Privacy policy</a></span></p>
   <div class="row-btns">
     <button type="button" class="btn btn-secondary btn-sm" id="consent-reject"><span data-l="pl">Odrzuć</span><span data-l="en">Reject</span></button>
     <button type="button" class="btn btn-secondary btn-sm" id="consent-accept"><span data-l="pl">Akceptuj</span><span data-l="en">Accept</span></button>

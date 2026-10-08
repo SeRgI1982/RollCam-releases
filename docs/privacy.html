@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pl" data-lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RollCam – polityka prywatności</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23DC2B26'/%3E%3Ccircle cx='16' cy='16' r='8.5' fill='none' stroke='white' stroke-width='2.6'/%3E%3Ccircle cx='16' cy='16' r='4.2' fill='white'/%3E%3C/svg%3E">
+<script>
+  // Same language choice as the main page: ?lang= -> saved choice -> browser languages -> English
+  (function () {
+    var l = null;
+    try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (l !== 'pl' && l !== 'en') { try { l = localStorage.getItem('rollcam-lang'); } catch (e) {} }
+    if (l !== 'pl' && l !== 'en') {
+      var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      l = 'en';
+      for (var i = 0; i < langs.length; i++) { var c = String(langs[i]).toLowerCase(); if (c.indexOf('pl') === 0) { l = 'pl'; break; } if (c.indexOf('en') === 0) break; }
+    }
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+  })();
+</script>
+<style>
+  :root { --n950: #0E1013; --n850: #181A1F; --n700: #2C3037; --n400: #868B94; --n300: #B4B8BF; --n100: #E6E8EB; --red300: #FF5A52; --red500: #DC2B26; --amber: #F5A524;
+          --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  html[data-lang="pl"] [data-l="en"], html[data-lang="en"] [data-l="pl"] { display: none !important; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--n950); color: var(--n100); font: 16px/1.7 var(--font); -webkit-font-smoothing: antialiased; }
+  .wrap { width: min(820px, 100% - 32px); margin-inline: auto; }
+  header { border-bottom: 1px solid rgba(255,255,255,.06); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 700; font-size: 19px; }
+  .brand svg { width: 30px; height: 30px; }
+  .lang { display: flex; gap: 6px; }
+  .lang button { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 8px; font: 600 13px var(--font); color: var(--n400); border: 1px solid var(--n700); }
+  .lang button[aria-pressed="true"] { color: #fff; background: var(--n700); }
+  main { padding: 48px 0 80px; }
+  h1 { font-size: clamp(30px, 5vw, 40px); line-height: 1.15; margin: 0 0 8px; color: #fff; }
+  h2 { font-size: 21px; margin: 36px 0 10px; color: #fff; }
+  p, li { color: var(--n300); }
+  a { color: var(--red300); }
+  .meta { color: var(--n400); font-size: 14px; margin-bottom: 28px; }
+  ul { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--n700); vertical-align: top; color: var(--n300); }
+  th { color: #fff; font-weight: 600; }
+  .todo { background: rgba(245,165,36,.18); color: var(--amber); padding: 0 4px; border-radius: 4px; font-weight: 600; }
+  .card { background: var(--n850); border: 1px solid var(--n700); border-radius: 14px; padding: 16px 20px; }
+  @media (max-width: 560px) { table, thead, tbody, tr, th, td { display: block; } thead { display: none; } td { border: 0; padding: 4px 0; } tr { padding: 10px 0; border-bottom: 1px solid var(--n700); } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./"><svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#DC2B26"/><circle cx="16" cy="16" r="8.5" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="16" cy="16" r="4.2" fill="#fff"/></svg>RollCam</a>
+    <div class="lang" role="group" aria-label="Język / Language">
+      <button type="button" data-set-lang="pl" aria-pressed="false">PL</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- ===================== POLSKI ===================== -->
+  <article data-l="pl">
+    <h1>Polityka prywatności</h1>
+    <p class="meta">Strona RollCam i aplikacja RollCam · obowiązuje od 8 października 2026</p>
+
+    <h2>1. Administrator danych</h2>
+    <div class="card">
+      <p style="margin:0"><strong>DevGroup Łukasz Szumyło</strong><br>
+      Kontakt w sprawach prywatności: <a href="mailto:kontakt@devgroup.com.pl">kontakt@devgroup.com.pl</a></p>
+    </div>
+
+    <h2>2. Co zbiera ta strona</h2>
+    <p>Strona jest statyczna – nie ma formularzy, kont ani komentarzy, więc sami nie zbieramy żadnych danych, które podajesz.</p>
+    <table>
+      <thead><tr><th>Co</th><th>Po co i na jakiej podstawie</th><th>Jak długo</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Statystyki odwiedzin</strong> (Google Analytics 4, Google Ireland Ltd) – tylko po kliknięciu „Akceptuj”: identyfikator przeglądarki zapisany w plikach cookie <code>_ga</code> i <code>_ga_*</code>, odwiedzone podstrony, kraj i miasto (w przybliżeniu), rodzaj urządzenia, system i przeglądarka, źródło wejścia.</td><td>Żeby wiedzieć, ile osób odwiedza stronę i co je interesuje. Podstawa: Twoja zgoda (art. 6 ust. 1 lit. a RODO). Google nie zapisuje adresów IP w Analytics 4.</td><td>Pliki cookie do 2 lat; dane w Google Analytics do 14 miesięcy.</td></tr>
+        <tr><td><strong>Twój wybór języka i decyzja o cookies</strong> – zapisane w Twojej przeglądarce (localStorage), nie wysyłane nigdzie.</td><td>Żeby strona pamiętała, który język wybrałeś i czy zgodziłeś się na statystyki. Niezbędne do działania strony.</td><td>Do wyczyszczenia danych przeglądarki.</td></tr>
+        <tr><td><strong>Dane techniczne serwera</strong> (adres IP, czas, przeglądarka) – zapisuje je hosting <strong>GitHub Pages</strong> (GitHub, Inc.).</td><td>Bezpieczeństwo i działanie serwisu – po stronie GitHub, zgodnie z <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">polityką prywatności GitHub</a>.</td><td>Według zasad GitHub.</td></tr>
+      </tbody>
+    </table>
+    <p>Bez zgody strona nie ładuje Google Analytics i nie łączy się z Google. Zgodę możesz w każdej chwili cofnąć – kliknij „Cookies” w stopce strony i wybierz „Odrzuć”; pliki cookie <code>_ga</code> zostaną usunięte.</p>
+    <p>Google może przetwarzać dane także w USA. Google LLC uczestniczy w programie EU-US Data Privacy Framework, który zapewnia odpowiedni poziom ochrony danych.</p>
+
+    <h2>3. Linki do innych serwisów</h2>
+    <p>Przyciski „Pobierz”, Suppi, Ko-fi i GitHub to zwykłe linki – strona nie wczytuje niczego z tych serwisów, dopóki w nie nie klikniesz. Po przejściu obowiązują zasady prywatności danego serwisu.</p>
+
+    <h2>4. Aplikacja RollCam</h2>
+    <ul>
+      <li>Nagrania i ustawienia zostają na Twoim komputerze. Aplikacja nie zbiera statystyk i nie wysyła nagrań ani danych o Tobie.</li>
+      <li>Aplikacja łączy się z GitHub, żeby sprawdzić i pobrać aktualizacje oraz – jeden raz – pobrać program ffmpeg. GitHub widzi wtedy Twój adres IP, jak przy każdym pobieraniu pliku.</li>
+      <li>Przyciski wsparcia (Suppi, Ko-fi) otwierają przeglądarkę na stronie danego serwisu.</li>
+    </ul>
+
+    <h2>5. Twoje prawa</h2>
+    <p>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz sprzeciwu, a także prawo do cofnięcia zgody w dowolnym momencie (bez wpływu na zgodność z prawem wcześniejszego przetwarzania). Napisz na <a href="mailto:kontakt@devgroup.com.pl">kontakt@devgroup.com.pl</a>. Masz też prawo wnieść skargę do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" rel="noopener">uodo.gov.pl</a>).</p>
+
+    <h2>6. Zmiany</h2>
+    <p>Gdy zmieni się sposób przetwarzania danych, zaktualizujemy tę stronę i datę na górze.</p>
+    <p><a href="./">← Wróć na stronę RollCam</a></p>
+  </article>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <article data-l="en">
+    <h1>Privacy policy</h1>
+    <p class="meta">RollCam website and RollCam app · effective from 8 October 2026</p>
+
+    <h2>1. Data controller</h2>
+    <div class="card">
+      <p style="margin:0"><strong>DevGroup Łukasz Szumyło</strong><br>
+      Privacy contact: <a href="mailto:kontakt@devgroup.com.pl">kontakt@devgroup.com.pl</a></p>
+    </div>
+
+    <h2>2. What this website collects</h2>
+    <p>The website is static – there are no forms, accounts or comments, so we do not collect any data you type in.</p>
+    <table>
+      <thead><tr><th>What</th><th>Why and legal basis</th><th>How long</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Visit statistics</strong> (Google Analytics 4, Google Ireland Ltd) – only after you click “Accept”: a browser identifier stored in the <code>_ga</code> and <code>_ga_*</code> cookies, pages visited, approximate country and city, device type, operating system and browser, referral source.</td><td>To know how many people visit the site and what interests them. Legal basis: your consent (Art. 6(1)(a) GDPR). Google Analytics 4 does not store IP addresses.</td><td>Cookies up to 2 years; data in Google Analytics up to 14 months.</td></tr>
+        <tr><td><strong>Your language choice and cookie decision</strong> – stored in your browser (localStorage), never sent anywhere.</td><td>So the site remembers your language and whether you agreed to statistics. Necessary for the site to work.</td><td>Until you clear your browser data.</td></tr>
+        <tr><td><strong>Server technical data</strong> (IP address, time, browser) – logged by the <strong>GitHub Pages</strong> hosting (GitHub, Inc.).</td><td>Security and operation of the service – on GitHub’s side, under the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</td><td>As set by GitHub.</td></tr>
+      </tbody>
+    </table>
+    <p>Without consent the site does not load Google Analytics and does not connect to Google. You can withdraw consent at any time – click “Cookies” in the footer and choose “Reject”; the <code>_ga</code> cookies are then deleted.</p>
+    <p>Google may also process data in the USA. Google LLC participates in the EU-US Data Privacy Framework, which ensures an adequate level of data protection.</p>
+
+    <h2>3. Links to other services</h2>
+    <p>The Download, Suppi, Ko-fi and GitHub buttons are plain links – the site loads nothing from those services until you click them. After that, their own privacy policies apply.</p>
+
+    <h2>4. The RollCam app</h2>
+    <ul>
+      <li>Recordings and settings stay on your computer. The app collects no statistics and sends no recordings or data about you.</li>
+      <li>The app connects to GitHub to check for and download updates and – once – to download ffmpeg. GitHub then sees your IP address, as with any file download.</li>
+      <li>The support buttons (Suppi, Ko-fi) open the service’s page in your browser.</li>
+    </ul>
+
+    <h2>5. Your rights</h2>
+    <p>You have the right to access, rectify and erase your data, to restrict processing, to data portability and to object, and to withdraw consent at any time (without affecting the lawfulness of earlier processing). Write to <a href="mailto:kontakt@devgroup.com.pl">kontakt@devgroup.com.pl</a>. You may also lodge a complaint with a supervisory authority – in Poland the President of the Personal Data Protection Office (UODO, ul. Stawki 2, 00-193 Warsaw, <a href="https://uodo.gov.pl" rel="noopener">uodo.gov.pl</a>) or the authority in your EU country.</p>
+
+    <h2>6. Changes</h2>
+    <p>If the way we process data changes, we will update this page and the date at the top.</p>
+    <p><a href="./">← Back to the RollCam website</a></p>
+  </article>
+</main>
+
+<script>
+  function setLang(l) {
+    document.documentElement.setAttribute('data-lang', l); document.documentElement.lang = l;
+    document.title = l === 'pl' ? 'RollCam – polityka prywatności' : 'RollCam – privacy policy';
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === l)); });
+    try { localStorage.setItem('rollcam-lang', l); } catch (e) {}
+  }
+  setLang(document.documentElement.getAttribute('data-lang'));
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) { b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); }); });
+</script>
+</body>
+</html>
