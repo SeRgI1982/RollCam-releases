@@ -1,30 +1,23 @@
-RollCam – licencja / license
-============================
+MIT License
 
-Copyright © 2026 Lukas Szumylo
+Copyright (c) 2026 DevGroup
 
-PL
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-RollCam jest programem darmowym (freeware). Wolno go bezpłatnie używać do dowolnych celów, także komercyjnych,
-i przekazywać innym w niezmienionej postaci, w tym przez udostępnianie oryginalnego instalatora. Nie wolno go
-sprzedawać ani rozpowszechniać w zmienionej postaci.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Program jest udostępniany w stanie, w jakim jest („as is”), bez jakichkolwiek gwarancji, wyraźnych ani
-dorozumianych, w tym gwarancji przydatności do określonego celu, poprawnego działania czy braku błędów.
-W najszerszym zakresie dopuszczalnym przez prawo autor nie odpowiada za żadne szkody wynikłe z używania programu
-lub niemożności jego użycia, w tym za utratę danych lub nagrań. Używasz programu na własne ryzyko.
-
-Komponenty zewnętrzne mają własne licencje – zobacz THIRD-PARTY-NOTICES.txt.
-
-EN
-
-RollCam is free software (freeware). You may use it free of charge for any purpose, including commercial use, and
-pass it on to others unchanged, including by sharing the original installer. You may not sell it or distribute it
-in modified form.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
-THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. TO THE MAXIMUM EXTENT
-PERMITTED BY LAW, IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES (INCLUDING LOSS OF DATA OR
-RECORDINGS) OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 Third-party components have their own licenses – see THIRD-PARTY-NOTICES.txt.

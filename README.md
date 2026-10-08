@@ -61,6 +61,6 @@ Windows oraz RollCam.
 
 ## Licencja
 
-RollCam jest darmowy: można go używać do dowolnych celów, także komercyjnych, i przekazywać dalej w niezmienionej
-postaci. Jest udostępniany „tak jak jest”, bez żadnych gwarancji – szczegóły w [LICENSE.txt](LICENSE.txt).
+RollCam jest darmowy i udostępniany na licencji [MIT](LICENSE.txt) (© 2026 DevGroup): „tak jak jest”, bez żadnych
+gwarancji i bez odpowiedzialności autora za skutki używania programu.
 Komponenty zewnętrzne mają własne licencje: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
