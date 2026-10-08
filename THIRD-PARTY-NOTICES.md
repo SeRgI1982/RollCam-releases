@@ -1,5 +1,8 @@
 # Komponenty zewnętrzne
 
+Ten sam spis (z pełnym tekstem licencji MIT Velopack) jest instalowany razem z aplikacją:
+`%LOCALAPPDATA%\RollCam\current\THIRD-PARTY-NOTICES.txt`.
+
 ## FFmpeg
 
 RollCam uruchamia program FFmpeg jako osobny proces. FFmpeg nie jest częścią instalatora: przy pierwszym
@@ -17,7 +20,9 @@ FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
 
 ## Velopack
 
-Instalator i aktualizacje: [Velopack](https://github.com/velopack/velopack), licencja MIT.
+Instalator i aktualizacje (`Setup.exe`, `Update.exe`, `Velopack.dll`): [Velopack](https://github.com/velopack/velopack),
+licencja [MIT](https://github.com/velopack/velopack/blob/main/LICENSE).
+Copyright © 2021 Caelan Sayler, Copyright © 2024 Velopack Ltd.
 
 ## .NET
 
