@@ -59,6 +59,8 @@ Ustawienia zostają w `%APPDATA%\Nagrywarka` – można usunąć ten folder ręc
 Zgłoś je w [Issues](https://github.com/SeRgI1982/RollCam-releases/issues): opisz, co się stało, i dołącz wersję
 Windows oraz RollCam.
 
-## Licencje komponentów
+## Licencja
 
-Zobacz [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+RollCam jest darmowy: można go używać do dowolnych celów, także komercyjnych, i przekazywać dalej w niezmienionej
+postaci. Jest udostępniany „tak jak jest”, bez żadnych gwarancji – szczegóły w [LICENSE.txt](LICENSE.txt).
+Komponenty zewnętrzne mają własne licencje: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
