@@ -1,14 +1,22 @@
 <!doctype html>
 <html lang="pl" data-lang="pl">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5XFBYJNY3K"></script>
+<!-- Google tag (gtag.js) with Consent Mode: nothing is loaded from Google until the visitor accepts (cookie banner below) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5XFBYJNY3K');
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+  window.loadAnalytics = function () {
+    if (window.analyticsLoaded) return;
+    window.analyticsLoaded = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5XFBYJNY3K';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-5XFBYJNY3K');
+  };
+  try { if (localStorage.getItem('rollcam-consent') === 'granted') window.loadAnalytics(); } catch (e) {}
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -288,6 +296,17 @@
   footer .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
   footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
   footer a { text-decoration: none; } footer a:hover { color: #fff; }
+  .link-btn { all: unset; cursor: pointer; color: inherit; } .link-btn:hover { color: #fff; }
+  .link-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 4px; }
+
+  /* Cookie consent: Google Analytics loads only after "Accept" */
+  .consent { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; margin-inline: auto; width: min(640px, 100% - 32px);
+             padding: 18px 20px; border-radius: 16px; background: var(--n850); border: 1px solid var(--n650);
+             box-shadow: 0 20px 50px rgba(0,0,0,.55); display: grid; gap: 14px; }
+  .consent[hidden] { display: none !important; }
+  .consent p { margin: 0; font-size: 15px; color: var(--n200); }
+  .consent .row-btns { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+  .consent .btn { min-width: 120px; }
 
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: none; }
@@ -847,12 +866,13 @@
     </div>
     <p class="cta-note" style="margin:0" data-l="pl">RollCam-win-Setup.exe · ok. 10 MB · Windows 10/11</p>
     <p class="cta-note" style="margin:0" data-l="en">RollCam-win-Setup.exe · about 10 MB · Windows 10/11</p>
-    <!-- Voluntary support: Suppi for Polish visitors (BLIK, transfers), Ko-fi for everyone else -->
+    <!-- Voluntary support: Suppi for Polish visitors (BLIK, transfers), Ko-fi for everyone else; plain links, no third-party scripts -->
     <div class="support" id="wsparcie">
       <p data-l="pl">RollCam jest darmowy. Jeśli Ci się przydaje, możesz dobrowolnie postawić autorowi kawę.</p>
       <p data-l="en">RollCam is free. If you find it useful, you can buy the author a coffee.</p>
       <a data-l="pl" class="suppi" href="https://suppi.pl/sergi1982" target="_blank" rel="noopener"><img src="img/suppi-button.webp" width="255" height="66" alt="Postaw mi kawkę na Suppi!"></a>
-      <div data-l="en" class="kofi"><script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'L1H828FH9K');kofiwidget2.draw();</script></div>
+      <!-- Static Ko-fi button (not Ko-fi's widget script, which loads Google Fonts before any consent) -->
+      <a data-l="en" class="suppi" href="https://ko-fi.com/sergi1982" target="_blank" rel="noopener"><img src="img/kofi-button.webp" width="240" height="47" alt="Support me on Ko-fi"></a>
     </div>
   </div>
 </section>
@@ -868,9 +888,17 @@
       <a href="#faq">FAQ</a>
       <a href="https://github.com/SeRgI1982/RollCam-releases">GitHub</a>
     </nav>
-    <span>© 2026 DevGroup · MIT</span>
+    <span><button type="button" class="link-btn" id="cookie-settings"><span data-l="pl">Cookies</span><span data-l="en">Cookies</span></button> · © 2026 DevGroup · MIT</span>
   </div>
 </footer>
+
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-labelledby="consent-text" hidden>
+  <p id="consent-text"><span data-l="pl">Ta strona może używać Google Analytics, żeby sprawdzić, ile osób ją odwiedza. Pliki cookie zapiszemy tylko, jeśli się zgodzisz – bez zgody nic nie jest wysyłane do Google. Decyzję zmienisz w stopce („Cookies”).</span><span data-l="en">This site can use Google Analytics to see how many people visit it. Cookies are stored only if you agree – without consent nothing is sent to Google. You can change your choice in the footer (“Cookies”).</span></p>
+  <div class="row-btns">
+    <button type="button" class="btn btn-secondary btn-sm" id="consent-reject"><span data-l="pl">Odrzuć</span><span data-l="en">Reject</span></button>
+    <button type="button" class="btn btn-secondary btn-sm" id="consent-accept"><span data-l="pl">Akceptuj</span><span data-l="en">Accept</span></button>
+  </div>
+</div>
 
 <script>
   var META = {
@@ -939,6 +967,37 @@
       var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); select(n);
     });
   });
+
+  // Cookie consent: the banner shows until the visitor decides; "Cookies" in the footer opens it again
+  (function () {
+    var banner = document.getElementById('consent');
+    function stored() { try { return localStorage.getItem('rollcam-consent'); } catch (e) { return null; } }
+    function store(v) { try { localStorage.setItem('rollcam-consent', v); } catch (e) {} }
+    function clearGaCookies() {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') !== 0) return;
+        var host = location.hostname, parts = host.split('.');
+        for (var i = 0; i < parts.length; i++) {
+          var domain = parts.slice(i).join('.');
+          document.cookie = name + '=; Max-Age=0; path=/; domain=' + domain;
+        }
+        document.cookie = name + '=; Max-Age=0; path=/';
+      });
+    }
+    document.getElementById('consent-accept').addEventListener('click', function () {
+      store('granted'); banner.hidden = true; window.loadAnalytics();
+    });
+    document.getElementById('consent-reject').addEventListener('click', function () {
+      var wasOn = window.analyticsLoaded;
+      store('denied'); banner.hidden = true;
+      gtag('consent', 'update', { analytics_storage: 'denied' });
+      clearGaCookies();
+      if (wasOn) location.reload(); // unloads the already running Google tag
+    });
+    document.getElementById('cookie-settings').addEventListener('click', function () { banner.hidden = false; });
+    if (!stored()) banner.hidden = false;
+  })();
 
   // Reveal on scroll
   if ('IntersectionObserver' in window) {
