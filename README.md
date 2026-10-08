@@ -1,5 +1,7 @@
 # RollCam
 
+*[English below](#english)*
+
 Nagrywanie ekranu na Windows: cały monitor, wybrane okno albo zaznaczony obszar, z mikrofonem i kamerą w rogu
 (obraz w obrazie). Nagrywanie można wstrzymać, a przed zapisem obejrzeć, przyciąć, wykadrować, dodać napisy
 i zapisać jako MP4, MKV, WebM, GIF, WebP albo AVIF.
@@ -64,3 +66,27 @@ Windows oraz RollCam.
 RollCam jest darmowy i udostępniany na licencji [MIT](LICENSE.txt) (© 2026 DevGroup): „tak jak jest”, bez żadnych
 gwarancji i bez odpowiedzialności autora za skutki używania programu.
 Komponenty zewnętrzne mają własne licencje: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+
+---
+
+## English
+
+RollCam is a free screen recorder for Windows: a whole monitor, a window or a selected area, with a microphone and
+a camera in the corner (picture-in-picture). You can pause, preview, trim, crop, add subtitles and save as MP4, MKV,
+WebM, GIF, WebP or AVIF. The app follows the Windows display language (Polish or English); you can change it in
+Settings.
+
+**[⬇ Download RollCam (Windows installer)](https://github.com/SeRgI1982/RollCam-releases/releases/latest/download/RollCam-win-Setup.exe)**
+
+- **Requirements:** Windows 10 (2004 or newer) or Windows 11, 64-bit; about 450 MB of disk space; an internet
+  connection during installation and the first start.
+- **Install:** run `RollCam-win-Setup.exe`. If Windows shows “Windows protected your PC”, click **More info** →
+  **Run anyway** (the installer is not code-signed yet). If .NET 10 Desktop Runtime is missing, the installer
+  installs it (Windows may ask for administrator consent for that step only).
+- **First start:** RollCam downloads [ffmpeg](https://ffmpeg.org) (about 100 MB) once, unless a compatible one is
+  already installed.
+- **Updates** download in the background and install the next time the app starts.
+- **Uninstall:** Settings → Apps → RollCam → Uninstall. Settings stay in `%APPDATA%\Nagrywarka`; recordings are kept.
+- **License:** [MIT](LICENSE.txt), © 2026 DevGroup – free, provided “as is”, without warranty.
+  Third-party components: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+- **Issues:** [GitHub Issues](https://github.com/SeRgI1982/RollCam-releases/issues).
